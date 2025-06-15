@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Delight - Fine Dining Experience</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Hotel Delight</h1>
+            <nav>
+                <a href="#menu" class="active">Menu</a>
+                <a href="#cart">Cart</a>
+                <a href="#about">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/hero-bg.jpg')">
+            <div class="hero-content">
+                <h2>Welcome to Hotel Delight</h2>
+                <p>Experience the finest culinary delights</p>
+                <div class="interior-features">
+                    <div class="feature">
+                        <i class="fas fa-wifi"></i>
+                        <span>Free Wi-Fi</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-parking"></i>
+                        <span>Valet Parking</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-music"></i>
+                        <span>Live Music</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-snowflake"></i>
+                        <span>Air Conditioned</span>
+                    </div>
+                </div>
+                <div class="interior-preview">
+                    <img src="images/hero-bg.jpg" alt="Interior View 1" class="preview-image">
+                    <img src="images/hero-bg.jpg" alt="Interior View 2" class="preview-image">
+                    <img src="images/hero-bg.jpg" alt="Interior View 3" class="preview-image">
+                </div>
+            </div>
+        </section>
+
+        <section id="menu" class="menu-section">
+            <h2>Our Menu</h2>
+            <div class="menu-filters">
+                <button class="filter-btn active" data-category="all">All Items</button>
+                <button class="filter-btn" data-category="starters">Starters</button>
+                <button class="filter-btn" data-category="main">Main Course</button>
+                <button class="filter-btn" data-category="desserts">Desserts</button>
+                <button class="filter-btn" data-category="beverages">Beverages</button>
+            </div>
+            
+            <div class="menu-grid">
+                <!-- Starters -->
+                <div class="menu-item">
+                    <div class="menu-item-image">
+                        <img src="images/bruschetta.jpg" alt="Bruschetta">
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Bruschetta</h3>
+                        <p class="description">Grilled bread rubbed with garlic and topped with tomatoes, olive oil, and herbs</p>
+                        <p class="price">₹199</p>
+                        <button onclick="addToCart(1, 'Bruschetta', 199)">
+                            <i class="fas fa-plus"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="menu-item-image">
+                        <img src="images/caesar-salad.jpg" alt="Caesar Salad">
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Caesar Salad</h3>
+                        <p class="description">Fresh romaine lettuce with classic Caesar dressing, croutons, and parmesan</p>
+                        <p class="price">₹249</p>
+                        <button onclick="addToCart(2, 'Caesar Salad', 249)">
+                            <i class="fas fa-plus"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Main Course -->
+                <div class="menu-item">
+                    <div class="menu-item-image">
+                        <img src="images/grilled-salmon.jpg" alt="Grilled Salmon">
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Grilled Salmon</h3>
+                        <p class="description">Fresh salmon fillet grilled to perfection with herbs and lemon</p>
+                        <p class="price">₹549</p>
+                        <button onclick="addToCart(3, 'Grilled Salmon', 549)">
+                            <i class="fas fa-plus"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="menu-item-image">
+                        <img src="images/beef-tenderloin.jpg" alt="Beef Tenderloin">
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Beef Tenderloin</h3>
+                        <p class="description">Premium cut beef tenderloin with red wine reduction sauce</p>
+                        <p class="price">₹699</p>
+                        <button onclick="addToCart(4, 'Beef Tenderloin', 699)">
+                            <i class="fas fa-plus"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Desserts -->
+                <div class="menu-item">
+                    <div class="menu-item-image">
+                        <img src="images/tiramisu.jpg" alt="Tiramisu">
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Tiramisu</h3>
+                        <p class="description">Classic Italian dessert with coffee-soaked ladyfingers and mascarpone cream</p>
+                        <p class="price">₹299</p>
+                        <button onclick="addToCart(5, 'Tiramisu', 299)">
+                            <i class="fas fa-plus"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="menu-item-image">
+                        <img src="images/lava-cake.jpg" alt="Chocolate Lava Cake">
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Chocolate Lava Cake</h3>
+                        <p class="description">Warm chocolate cake with molten center, served with vanilla ice cream</p>
+                        <p class="price">₹249</p>
+                        <button onclick="addToCart(6, 'Chocolate Lava Cake', 249)">
+                            <i class="fas fa-plus"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Beverages -->
+                <div class="menu-item">
+                    <div class="menu-item-image">
+                        <img src="images/espresso.jpg" alt="Espresso">
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Espresso</h3>
+                        <p class="description">Rich and aromatic single shot of espresso</p>
+                        <p class="price">₹149</p>
+                        <button onclick="addToCart(7, 'Espresso', 149)">
+                            <i class="fas fa-plus"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="menu-item-image">
+                        <img src="images/red-wine.jpg" alt="Red Wine">
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Red Wine</h3>
+                        <p class="description">Premium house red wine by the glass</p>
+                        <p class="price">₹399</p>
+                        <button onclick="addToCart(8, 'Red Wine', 399)">
+                            <i class="fas fa-plus"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cart" class="cart-section">
+            <h2>Your Cart</h2>
+            <div class="cart-container">
+                <ul id="cart-items"></ul>
+                <div class="cart-total">
+                    <p>Subtotal: ₹<span id="cart-subtotal">0.00</span></p>
+                    <p>Tax (10%): ₹<span id="cart-tax">0.00</span></p>
+                    <p>Total: ₹<span id="cart-total">0.00</span></p>
+                    <button onclick="checkout()" class="checkout-btn">
+                        <i class="fas fa-shopping-cart"></i> Checkout
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section id="orders" class="orders-section">
+            <h2>Order History</h2>
+            <button onclick="viewOrderHistory()">View Order History</button>
+        </section>
+
+        <section id="about" class="about-section">
+            <h2>About Hotel Delight</h2>
+            <div class="about-content">
+                <img src="images/restaurant.jpg" alt="Restaurant Interior">
+                <div class="about-text">
+                    <p>Experience the finest dining at Hotel Delight. Our expert chefs prepare exquisite dishes using the freshest ingredients to create an unforgettable culinary experience.</p>
+                    <div class="features">
+                        <div class="feature">
+                            <i class="fas fa-utensils"></i>
+                            <h3>Fine Dining</h3>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-wine-glass-alt"></i>
+                            <h3>Premium Service</h3>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-star"></i>
+                            <h3>5-Star Experience</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-phone"></i> +91 1234567890</p>
+                <p><i class="fas fa-envelope"></i> info@hoteldelight.com</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Hotel Delight. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
